@@ -1,7 +1,9 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const personSchema = new mongoose.Schema({
-  {name: String, required: true},
+  name: { type: String, required: true },
   age: Number,
-  favoriteFoods: Array
-})
+  favoriteFoods: Array,
+});
+
+module.exports = mongoose.model("Person", personSchema);
