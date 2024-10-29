@@ -63,13 +63,26 @@ mongoose
 
 // fetchName();
 
-async function fetchFood() {
+// async function fetchFood() {
+//   try {
+//     const foods = await Person.findOne({ favoriteFoods: { $in: "pastech" } });
+//     console.log(foods);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+
+// fetchFood();
+
+async function fetchId() {
   try {
-    const foods = await Person.findOne({ favoriteFoods: { $in: "pastech" } });
-    console.log(foods);
+    const identity = await Person.findById({
+      _id: "6720a4e521a690ecc5b907e4",
+    });
+    console.log(identity);
   } catch (err) {
     console.error(err);
   }
 }
 
-fetchFood();
+fetchId();
