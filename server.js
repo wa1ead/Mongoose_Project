@@ -74,15 +74,25 @@ mongoose
 
 // fetchFood();
 
-async function fetchId() {
-  try {
-    const identity = await Person.findById({
-      _id: "6720a4e521a690ecc5b907e4",
-    });
-    console.log(identity);
-  } catch (err) {
-    console.error(err);
-  }
-}
+// async function fetchId() {
+//   try {
+//     const identity = await Person.findById({
+//       _id: "6720a4e521a690ecc5b907e4",
+//     });
+//     console.log(identity);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
 
-fetchId();
+// fetchId();
+
+Person.findById({ _id: "6720c656d54a836167bbc57b" })
+  .then((food) => {
+    food.favoriteFoods.push("couscous");
+    food.save();
+    console.log(food);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
