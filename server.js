@@ -52,13 +52,24 @@ mongoose
 
 // arrayOfPeople();
 
-async function fetchName() {
+// async function fetchName() {
+//   try {
+//     const names = await Person.find({ name: "Walid" });
+//     console.log(names);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+
+// fetchName();
+
+async function fetchFood() {
   try {
-    const names = await Person.find({ name: "Walid" });
-    console.log(names);
+    const foods = await Person.findOne({ favoriteFoods: { $in: "pastech" } });
+    console.log(foods);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
-fetchName();
+fetchFood();
