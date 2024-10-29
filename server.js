@@ -22,32 +22,43 @@ mongoose
 //     console.error(err);
 //   });
 
-async function arrayOfPeople() {
-  const people = await Person.create([
-    {
-      name: "Yassine",
-      age: 20,
-      favoriteFoods: "pastilla",
-    },
-    {
-      name: "Moussa",
-      age: 33,
-      favoriteFoods: "tajine",
-    },
-    {
-      name: "Lmorphine",
-      age: 42,
-      favoriteFoods: "pastech",
-    },
-    {
-      name: "inkonnu",
-      age: 28,
-      favoriteFoods: "baghrir",
-    },
-    { name: "EGT", age: 26, favoriteFoods: "jackda" },
-  ]);
+// async function arrayOfPeople() {
+//   const people = await Person.create([
+//     {
+//       name: "Yassine",
+//       age: 20,
+//       favoriteFoods: "pastilla",
+//     },
+//     {
+//       name: "Moussa",
+//       age: 33,
+//       favoriteFoods: "tajine",
+//     },
+//     {
+//       name: "Lmorphine",
+//       age: 42,
+//       favoriteFoods: "pastech",
+//     },
+//     {
+//       name: "inkonnu",
+//       age: 28,
+//       favoriteFoods: "baghrir",
+//     },
+//     { name: "EGT", age: 26, favoriteFoods: "jackda" },
+//   ]);
 
-  console.log(people);
+//   console.log(people);
+// }
+
+// arrayOfPeople();
+
+async function fetchName() {
+  try {
+    const names = await Person.find({ name: "Walid" });
+    console.log(names);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-arrayOfPeople();
+fetchName();
