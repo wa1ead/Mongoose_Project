@@ -125,15 +125,15 @@ mongoose
 //     console.log(err);
 //   });
 
-Person.find(
-  { favoriteFoods: "jackda" },
-  ["name", "favoriteFoods"],
-  { limit: 2 },
-  { sort: "name" }
-)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// Person.find(
+//   { favoriteFoods: "jackda" },
+//   ["name", "favoriteFoods"],
+//   { limit: 2 },
+//   { sort: "name" }
+// )
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
