@@ -97,13 +97,21 @@ mongoose
 //     console.error(err);
 //   });
 
-Person.findOneAndUpdate(
-  { name: "Lmorphine" },
-  { $set: { age: 20 } },
-  { new: true }
-)
+// Person.findOneAndUpdate(
+//   { name: "Lmorphine" },
+//   { $set: { age: 20 } },
+//   { new: true }
+// )
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+Person.findByIdAndDelete("6720c68efd1beaabde54e0c1")
   .then((data) => {
-    console.log(data);
+    console.log(`DELETED ${data.name} SUCCESSFULLY: ${data}`);
   })
   .catch((err) => {
     console.error(err);
