@@ -109,10 +109,18 @@ mongoose
 //     console.error(err);
 //   });
 
-Person.findByIdAndDelete("6720c68efd1beaabde54e0c1")
-  .then((data) => {
-    console.log(`DELETED ${data.name} SUCCESSFULLY: ${data}`);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// Person.findByIdAndDelete("6720c68efd1beaabde54e0c1")
+//   .then((data) => {
+//     console.log(`DELETED ${data.name} SUCCESSFULLY: ${data}`);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+// Person.remove({ name: "Mary" })
+//   .then(() => {
+//     console.log("deleted");
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
