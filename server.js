@@ -87,11 +87,23 @@ mongoose
 
 // fetchId();
 
-Person.findById({ _id: "6720c656d54a836167bbc57b" })
-  .then((food) => {
-    food.favoriteFoods.push("couscous");
-    food.save();
-    console.log(food);
+// Person.findById({ _id: "6720c656d54a836167bbc57b" })
+//   .then((food) => {
+//     food.favoriteFoods.push("couscous");
+//     food.save();
+//     console.log(food);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+Person.findOneAndUpdate(
+  { name: "Lmorphine" },
+  { $set: { age: 20 } },
+  { new: true }
+)
+  .then((data) => {
+    console.log(data);
   })
   .catch((err) => {
     console.error(err);
